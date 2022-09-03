@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from .models import Familia
 
+
+def inicio(request):
+    return render(request, 'index.html')
+
+
+
 def familia(request):
-    return render(request, 'familia.html', context={})
+    return render(request, 'Mi_Familia/familia.html', context={})
 
 def crear_familia(request):
     hogar = Familia.objects.create(
@@ -20,4 +26,4 @@ def crear_familia(request):
         
         )
     context = {'hogar':hogar}
-    return render(request, 'familia.html', context)
+    return render(request, 'Mi_Familia/familia.html', context)
