@@ -13,4 +13,3 @@ class Familia(models.Model):
     hjs_nombre = models.CharField(max_length=40)
     hjs_edad = models.FloatField()
     hjs_nacimiento = models.DateField()
-
